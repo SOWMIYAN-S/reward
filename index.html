@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RDX Sparrow - Learn Anything</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* General body styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: black; /* Background in black */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: white; /* Default text color in white */
+    }
+
+    /* Header styling */
+    header h1 {
+      color: yellow; /* Header in yellow */
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    /* Paragraph styling */
+    p {
+      color: white; /* Paragraph in white */
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      text-align: center;
+      max-width: 600px;
+    }
+
+    /* Form input styling */
+    form input {
+      padding: 10px;
+      font-size: 1rem;
+      border: 2px solid yellow; /* Yellow border */
+      border-radius: 5px;
+      width: 300px;
+      margin-bottom: 15px;
+      background-color: black; /* Input background black */
+      color: white; /* Input text white */
+    }
+
+    /* Button styling */
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: yellow; /* Button in yellow */
+      color: black; /* Text in black */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: white; /* Button changes to white on hover */
+      color: black; /* Text remains black */
+    }
+
+    /* GET LINK styling */
+    a#getlink {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: yellow; /* Link button in yellow */
+      color: black; /* Text in black */
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    a#getlink:hover {
+      background-color: white; /* Changes to white on hover */
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>RDX Sparrow - Learn Anything</h1>
+  </header>
+
+  <!-- Description Paragraph -->
+  <p>
+    Welcome to the course claiming page for those participating in our giveaway. Enter your email to verify and claim your course link. If your email is registered, you'll receive a link to access your course.
+  </p>
+
+  <!-- Form Section -->
+  <form action="">
+    <input id="email" type="email" placeholder="Enter your email">
+  </form>
+
+  <!-- Check Button -->
+  <button id="btn" onclick="checkEmail()">CHECK</button>
+  
+  <!-- GET LINK as an anchor tag -->
+  <a id="getlink" href="" style="display:none;">GET LINK</a>
+
+  <script>
+    let MAILS = ['goviprasath18@gmail.com','rdxsparrowgaming@gmail.com','sanjaisanjai66631@gmail.com','ushaswiniusha2@gmail.com','mohish682@gmail.com'];
+
+    function checkEmail() {
+      let MAIL = document.getElementById("email").value;
+      if (MAILS.includes(MAIL)) {
+        // Show the 'GET LINK' anchor and set its href to index.html
+        let link = document.getElementById('getlink');
+        link.href = "https://www.udemy.com/course/practical-modern-cpp-masterclass/?couponCode=E15F5DD5313C88C4398F";
+        link.style.display = "inline"; // Make the link visible
+      } else {
+        alert("Email not found");
+      }
+    }
+  </script>
+</body>
+</html>
